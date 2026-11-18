@@ -1,0 +1,65 @@
+{
+  "ts": 1794962100.4,
+  "scanning": false,
+  "df": {
+    "total": 4398046511104,
+    "used": 2770769301995,
+    "free": 1627277209108,
+    "pct": 63.0
+  },
+  "dirs": [
+    {
+      "path": "/srv/media",
+      "label": "影视库",
+      "bytes": 335007449088
+    },
+    {
+      "path": "/srv/photos",
+      "label": "照片备份",
+      "bytes": 158913789952
+    },
+    {
+      "path": "/var/lib/docker",
+      "label": "容器数据",
+      "bytes": 103079215104
+    },
+    {
+      "path": "/srv/docker",
+      "label": "镜像与构建缓存",
+      "bytes": 103079215104
+    },
+    {
+      "path": "/srv/backup",
+      "label": "增量备份",
+      "bytes": 65498251264
+    },
+    {
+      "path": "/var/log",
+      "label": "系统日志",
+      "bytes": 9663676416
+    },
+    {
+      "path": "/opt",
+      "label": "应用目录",
+      "bytes": 5368709120
+    }
+  ],
+  "docker": {
+    "Images": {
+      "size": "18.4GB",
+      "reclaim": "4.1GB (22%)"
+    },
+    "Containers": {
+      "size": "512MB",
+      "reclaim": "0B"
+    },
+    "Local Volumes": {
+      "size": "6.2GB",
+      "reclaim": "0B"
+    },
+    "Build Cache": {
+      "size": "2.6GB",
+      "reclaim": "2.6GB"
+    }
+  }
+}

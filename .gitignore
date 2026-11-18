@@ -1,0 +1,9 @@
+panel.conf.json
+panel.conf.json.*
+history.json
+state-stops.json
+access-agg.json
+netio.json
+*.log
+__pycache__/
+.DS_Store

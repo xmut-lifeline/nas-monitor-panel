@@ -1,0 +1,35 @@
+{
+  "ts": 1794962100.4,
+  "cached": false,
+  "total": 0,
+  "rows": [
+    {
+      "key": "apt",
+      "label": "APT 缓存",
+      "bytes": 0,
+      "status": "ok",
+      "note": "无缓存"
+    },
+    {
+      "key": "journal",
+      "label": "systemd 日志",
+      "bytes": 0,
+      "status": "ok",
+      "note": "已轮转到上限"
+    },
+    {
+      "key": "docker-image",
+      "label": "Docker 悬空镜像",
+      "bytes": 0,
+      "status": "ok",
+      "note": "无悬空镜像"
+    },
+    {
+      "key": "TMP",
+      "label": "/tmp 临时文件",
+      "bytes": 0,
+      "status": "ok",
+      "note": "无须清理"
+    }
+  ]
+}
