@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="104" viewBox="0 0 600 104" role="img" aria-label="本项目的 AI 协作水印：DeepSeek 与豆包">
+  <defs>
+    <linearGradient id="wBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4D6BFE" stop-opacity=".13"/>
+      <stop offset=".5" stop-color="#6A5BF0" stop-opacity=".11"/>
+      <stop offset="1" stop-color="#A85BE8" stop-opacity=".13"/>
+    </linearGradient>
+    <pattern id="wTex" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)">
+      <text x="0" y="17" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"
+            font-size="9" font-weight="700" fill="#7f9bff" fill-opacity=".18">AI</text>
+    </pattern>
+  </defs>
+  <rect x="1" y="1" width="598" height="102" rx="18" fill="url(#wBg)"/>
+  <rect x="1" y="1" width="598" height="102" rx="18" fill="url(#wTex)"/>
+  <rect x="1" y="1" width="598" height="102" rx="18" fill="none" stroke="#7f9bff" stroke-opacity=".35"/>
+  <text x="24" y="32" font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif"
+        font-size="13.5" font-weight="700" fill="#4a63d8">本项目的 AI 协作水印</text>
+  <text x="24" y="55" font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif"
+        font-size="11" fill="#6b789f">DeepSeek 深度求索 — 代码重构、性能优化、问题定位</text>
+  <text x="24" y="73" font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif"
+        font-size="11" fill="#6b789f">豆包 Doubao — 文案撰写、文档校对、说明梳理</text>
+  <text x="24" y="91" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
+        font-size="9" fill="#8a95b8">AI COLLABORATION WATERMARK · 仅作协作致谢，不代表背书</text>
+  <g transform="translate(414 24)">
+    <rect width="160" height="26" rx="8" fill="#4D6BFE"/>
+    <text x="80" y="17.5" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"
+          font-size="11.5" font-weight="700" fill="#fff">DeepSeek 深度求索</text>
+  </g>
+  <g transform="translate(414 54)">
+    <rect width="160" height="26" rx="8" fill="#6A5BF0"/>
+    <text x="80" y="17.5" text-anchor="middle" font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif"
+          font-size="11.5" font-weight="700" fill="#fff">豆包 Doubao</text>
+  </g>
+</svg>

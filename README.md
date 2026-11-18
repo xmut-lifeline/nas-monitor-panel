@@ -219,6 +219,73 @@ sudo systemctl daemon-reload && sudo systemctl enable --now nas-panel
 
 > 图标全部是手写 SVG 路径，字体使用系统字体栈，没有引入任何图标库或 Web Font。
 
-## License
+### AI 协作与水印
 
-MIT
+这个面板的实现过程中有 AI 助手参与，按协作内容在此署名。水印文件在 `docs/brand/`，
+是可复用的 SVG（矢量、无外部字体依赖），下方为原图：
+
+<p align="center">
+  <img src="docs/brand/ai-collab-watermark.svg" alt="AI 协作水印：DeepSeek 与豆包" width="600">
+</p>
+
+<p align="center">
+  <img src="docs/brand/deepseek-watermark.svg" alt="DeepSeek 协作水印" width="268">
+  &nbsp;&nbsp;
+  <img src="docs/brand/doubao-watermark.svg" alt="豆包 协作水印" width="268">
+</p>
+
+| 协作方 | 承担的部分 | 水印文件 |
+| --- | --- | --- |
+| **DeepSeek（深度求索）** | 代码重构与性能优化：状态采集的并发与缓存策略、`ThreadingHTTPServer` 路由整理、前端表格与浮层的交互修复、问题定位与调试 | `docs/brand/deepseek-watermark.svg` |
+| **豆包（Doubao）** | 文案与文档：界面文案、README 结构与说明梳理、脱敏清单校对 | `docs/brand/doubao-watermark.svg` |
+
+> 水印仅用于说明「谁参与了协作」，**不代表任何形式的背书、认证或商业关联**；
+> DeepSeek、豆包等名称与标识归其各自权利人所有。如需在自己的二次开发版本中沿用，
+> 请保留本段说明并自行确认商标使用合规。
+
+
+## 开源许可
+
+### 本项目
+
+| 项 | 内容 |
+| --- | --- |
+| 代码许可 | **MIT**，全文见 [LICENSE](LICENSE) |
+| 覆盖范围 | `index.html`、`panel.py`、`demo/`、`docs/`（含预览图与水印 SVG）、`panel.conf.example.json` |
+| 署名要求 | 再分发时保留 `LICENSE` 中的版权声明与许可声明 |
+
+### 第三方依赖
+
+| 类别 | 情况 | 许可 |
+| --- | --- | --- |
+| 前端运行时 | **零依赖**：无框架、无构建工具、无 npm 包、无图标库、无 Web Font（图标是手写 SVG 路径，字体用系统字体栈） | 不涉及 |
+| 后端运行时 | **仅 Python 标准库**（`http.server`、`subprocess`、`threading`、`json`、`hashlib`…），无 requirements.txt | 随 Python 发行（PSF-2.0），本项目不再分发 |
+| 前端第三方资源 | 无 CDN、无外链脚本 | 不涉及 |
+
+所以把仓库完整克隆下来，不需要 `npm install`、不需要 `pip install`，也不存在许可证传染问题。
+
+### 部署时可能用到的第三方组件
+
+这些只在部署环境里出现，**不在本仓库内分发**，各自遵循原许可：
+
+| 组件 | 许可 | 说明 |
+| --- | --- | --- |
+| Python 官方镜像 `python:3.x-slim` | PSF-2.0 | 若用 Docker 跑 `panel.py` |
+| nginx（含 `nginx:alpine` 镜像） | BSD-2-Clause | 若在前面套反向代理 |
+| Docker Engine / CLI | Apache-2.0 | 面板通过 `docker` 命令读取容器状态，属调用而非链接 |
+| OpenWrt + HomeProxy 包 | GPL-2.0 / MIT 等（随包） | 代理页读取的是容器内 `uci` 输出 |
+| Cloudflare Tunnel（`cloudflared`） | Apache-2.0 | 仅作为被监控对象 |
+
+### 参考文档与设计语言
+
+「参考与致谢」里列出的 MDN、Apple、Docker、systemd 等文档，只作为**规范与设计参考**被阅读，
+仓库中不含它们的代码或素材，因此不产生额外的分发义务：
+
+- MDN 文档正文为 CC-BY-SA 2.5，其中的代码示例为 CC0 —— 本项目未复制其示例代码
+- Apple「Liquid Glass」仅为视觉方向参考，未使用其任何素材或实现
+- 各项目的名称与商标归其权利人所有
+
+### 预览图与水印
+
+`docs/preview/*.png` 由本仓库的 Demo 假数据渲染生成，`docs/brand/*.svg` 为手写矢量文件，
+二者同样以 MIT 授权，可自由用于介绍本项目的文章或 README。
