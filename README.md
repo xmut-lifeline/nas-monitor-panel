@@ -170,7 +170,19 @@ sudo systemctl daemon-reload && sudo systemctl enable --now nas-panel
 | Demo 数据 | 真实快照 | 手写假数据，网卡 MAC 为 `aa:bb:cc:00:11:0x` |
 | 代理订阅 / 节点 | 真实订阅链接与节点名 | Demo 里直接标注「未安装」 |
 
-内网网段（`192.168.x.x`）按作者要求保留原样，仅作示例。
+### 保留项（有意不脱敏）
+
+| 项 | 说明 |
+| --- | --- |
+| 内网网段 `192.168.x.x` | 按需求保留，仅作示例；不代表任何真实部署地址 |
+| 探测目标 `223.5.5.5` / `www.baidu.com` | 公共 DNS 与公共站点，链路体检用，可自行改 `panel.py` 里的常量 |
+| 公开软件名 | OpenWrt、HomeProxy、Jellyfin、Immich、Nextcloud、Portainer 等均为开源项目名，不涉及个人信息 |
+| 容器名 / 单元名 | 全部为通用命名（`nas-proxy`、`nas-backup.timer` 等），部署时按自己的环境改 |
+
+### 提交与署名
+
+仓库历史只有 1 个提交，提交署名使用 `nas-panel <nas-panel@users.noreply.github.com>`，
+不含个人邮箱；历史中不存在任何早期含真实信息的版本。
 
 ## 参考与致谢
 
